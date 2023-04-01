@@ -1,38 +1,84 @@
 .App {
   text-align: center;
+  margin: 5%;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: url('https://media.istockphoto.com/id/1281724535/photo/large-group-of-business-people-in-convention-centre.jpg?s=170667a&w=0&k=20&c=jlKC3sN4lMTORKM5RvqFvElr1AVpseaxb2pxUlliFXo=') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  overflow-x: hidden;
+  background-repeat: no-repeat;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card{
+  margin-right: 55%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.crd{
+  margin-right: 55%;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  cursor: pointer;
+}
+
+.crd:hover{
+  transform: scale(1.05);
+box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.card-header{
+  padding: 2%;
+}
+
+/* .cb{
+  margin-top: 5%;
+} */
+
+.img{
+  position: absolute;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+span{
+  margin-left: 10px;
+}
+
+.details{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 50px;
+  margin-top: -425%;
+  margin-left: 55%;
 }
 
-.App-link {
-  color: #61dafb;
+.img-details{
+  display: block;
+  margin-top: -4%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.username{
+  margin-top: 5%;
+  text-decoration: underline;
+}
+
+.list-group{
+  display: flex;
+  align-items: flex-start;
+  margin-top: 6%;
+}
+
+li{
+  margin-bottom: 3%;
 }
