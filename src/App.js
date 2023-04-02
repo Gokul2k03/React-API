@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import axios from 'axios';
-import { Loader } from 'rsuite';
 
 function App() {
   const [users, setUsers] = useState(null);
@@ -38,15 +37,20 @@ function App() {
             );
           })
         ) : (
-          <Loader center content="loading" />
+          <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
         )}
       </div>
       <div className='container details'>
-      <div class="card details-card">
-          <div className='card-header text-bg-primary mb-3 '>
+      
+      {selectedUser ? (
+        <div class="card details-card">
+        <div className='card-header text-bg-primary mb-3 '>
             User Details
           </div>
-      {selectedUser ? (
           <div class="card-body">
             <img className='img img-details' src='{user.avatar}' alt='user-profile' />
             <p className='username'>@{selectedUser.profile.username}</p>
@@ -68,9 +72,8 @@ function App() {
                 <li class="list-group-item list-group-item-secondary rounded">{selectedUser.profile.email}</li>
               </ul>
           </div>
-        
+          </div>
       ) : null}
-      </div>
       </div>
     </div>
   );
